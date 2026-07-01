@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[WF] 体験談 - 平等大慧会</title>
+<script src="auth.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Hiragino Kaku Gothic Pro', sans-serif; background: #f5f5f5; color: #333; }
+.site-header { background: #1a1a1a; padding: 0 40px; height: 70px; display: flex; align-items: center; justify-content: space-between; }
+.site-header .logo { background: #444; width: 160px; height: 36px; border-radius: 2px; }
+.site-header nav { display: flex; gap: 24px; }
+.site-header nav span { color: #aaa; font-size: 13px; border-bottom: 1px solid #555; padding-bottom: 2px; cursor: pointer; }
+.page-hero { background: #2b2b2b; padding: 50px 40px 40px; }
+.page-hero .label { color: #888; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+.page-hero h1 { color: #fff; font-size: 28px; font-weight: normal; letter-spacing: 1px; }
+.breadcrumb { background: #f0ece7; padding: 12px 40px; font-size: 12px; color: #888; border-bottom: 1px solid #e0d9d0; }
+.breadcrumb span { color: #b0a090; margin: 0 6px; }
+.main-wrap { max-width: 960px; margin: 48px auto; padding: 0 40px; }
+.main-wrap.wide { max-width: 1100px; }
+.section { margin-bottom: 56px; }
+.section-title { font-size: 20px; font-weight: bold; color: #2b2b2b; padding-bottom: 10px; border-bottom: 2px solid #2b2b2b; margin-bottom: 24px; }
+.section-title.light { border-bottom-color: #ccc; color: #555; font-size: 16px; }
+.img-box { background: #ddd; border: 1px solid #bbb; display: flex; align-items: center; justify-content: center; color: #999; font-size: 13px; }
+.img-box.hero-img { width: 100%; height: 320px; margin-bottom: 32px; }
+.img-box.thumb { width: 280px; height: 190px; flex-shrink: 0; }
+.img-box.thumb-sm { width: 200px; height: 140px; flex-shrink: 0; }
+.img-box.full { width: 100%; height: 260px; margin-bottom: 20px; }
+.img-box.map { width: 100%; height: 380px; margin-bottom: 32px; }
+.line { background: #ccc; height: 14px; border-radius: 2px; margin-bottom: 10px; }
+.line.short { width: 55%; }
+.line.med { width: 75%; }
+.line.full-w { width: 100%; }
+.card-row { display: flex; gap: 24px; margin-bottom: 24px; }
+.card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 2px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.grid-card { background: #fff; border: 1px solid #ddd; border-radius: 2px; overflow: hidden; }
+.grid-card .card-img { background: #ddd; height: 140px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 12px; }
+.grid-card .card-body { padding: 14px; }
+.grid-card .card-title { font-size: 14px; font-weight: bold; margin-bottom: 8px; color: #333; }
+.grid-card .card-line { background: #ccc; height: 11px; border-radius: 2px; margin-bottom: 6px; }
+.news-item { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid #e0e0e0; }
+.news-date { font-size: 13px; color: #888; white-space: nowrap; min-width: 100px; }
+.news-cat { background: #2b2b2b; color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 2px; white-space: nowrap; }
+.news-title-bar { background: #ccc; height: 14px; border-radius: 2px; width: 80%; margin-bottom: 6px; }
+.news-sub-bar { background: #e0e0e0; height: 11px; border-radius: 2px; width: 55%; }
+.form-table { width: 100%; border-collapse: collapse; }
+.form-table th { width: 200px; padding: 18px 20px; text-align: left; font-size: 14px; background: #f5f0eb; border-bottom: 1px solid #ddd; vertical-align: top; }
+.form-table td { padding: 18px 20px; border-bottom: 1px solid #ddd; }
+.form-input { background: #fff; border: 1px solid #bbb; height: 38px; width: 100%; border-radius: 2px; }
+.form-textarea { background: #fff; border: 1px solid #bbb; height: 120px; width: 100%; border-radius: 2px; }
+.required { color: #c00; font-size: 11px; margin-left: 6px; }
+.btn { display: inline-block; background: #2b2b2b; color: #fff; padding: 14px 48px; font-size: 15px; border-radius: 2px; cursor: pointer; }
+.btn.outline { background: #fff; color: #2b2b2b; border: 1px solid #2b2b2b; }
+.btn-wrap { text-align: center; margin-top: 32px; }
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table th, .info-table td { padding: 16px 20px; border: 1px solid #ddd; font-size: 14px; }
+.info-table th { background: #f5f0eb; width: 200px; font-weight: bold; text-align: left; }
+.pagination { display: flex; justify-content: center; gap: 8px; margin-top: 40px; }
+.page-btn { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; font-size: 13px; background: #fff; color: #555; }
+.page-btn.active { background: #2b2b2b; color: #fff; border-color: #2b2b2b; }
+.tabs { display: flex; border-bottom: 2px solid #2b2b2b; margin-bottom: 32px; }
+.tab { padding: 12px 28px; font-size: 14px; color: #888; cursor: pointer; border: 1px solid #ddd; border-bottom: none; margin-right: 4px; background: #f5f5f5; }
+.tab.active { background: #2b2b2b; color: #fff; border-color: #2b2b2b; }
+.sitemap-l1 { font-size: 16px; font-weight: bold; padding: 8px 0; border-bottom: 1px solid #ccc; margin-bottom: 12px; color: #2b2b2b; }
+.sitemap-l2 { padding: 6px 0 6px 20px; font-size: 14px; color: #555; border-bottom: 1px solid #eee; }
+.sitemap-l3 { padding: 5px 0 5px 40px; font-size: 13px; color: #888; }
+.sitemap-section { margin-bottom: 32px; }
+.site-footer { background: #1a1a1a; margin-top: 80px; padding: 40px; }
+.footer-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; }
+.footer-logo { background: #444; width: 140px; height: 32px; border-radius: 2px; margin-bottom: 16px; }
+.footer-copy { color: #666; font-size: 11px; margin-top: 8px; }
+.footer-nav { display: flex; flex-direction: column; gap: 8px; }
+.footer-nav span { color: #888; font-size: 12px; }
+.footer-bottom { border-top: 1px solid #333; margin-top: 24px; padding-top: 16px; text-align: center; color: #555; font-size: 11px; }
+a{color:inherit;text-decoration:none;}</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo"></div>
+  <nav>
+    <span>平等大慧会について</span>
+    <span>教え・活動</span>
+    <span>お知らせ</span>
+    <span>交通アクセス</span>
+    <span>お問い合わせ</span>
+  </nav>
+</header>
+<div class="page-hero">
+  <div class="label">Testimonials</div>
+  <h1>体験談</h1>
+</div>
+<div class="breadcrumb"><a href="#">トップ</a> <span>›</span> 救護活動 <span>›</span> 体験談</div>
+
+<div class="main-wrap">
+  <div class="section">
+    <div class="section-title">体験談</div>
+    <div class="grid-2"><div class="grid-card">
+        <div class="card-img">写真</div>
+        <div class="card-body">
+          <div class="card-title">タイトル 1</div>
+          <div class="card-line"></div>
+          <div class="card-line" style="width:65%"></div>
+        </div>
+      </div><div class="grid-card">
+        <div class="card-img">写真</div>
+        <div class="card-body">
+          <div class="card-title">タイトル 2</div>
+          <div class="card-line"></div>
+          <div class="card-line" style="width:65%"></div>
+        </div>
+      </div><div class="grid-card">
+        <div class="card-img">写真</div>
+        <div class="card-body">
+          <div class="card-title">タイトル 3</div>
+          <div class="card-line"></div>
+          <div class="card-line" style="width:65%"></div>
+        </div>
+      </div><div class="grid-card">
+        <div class="card-img">写真</div>
+        <div class="card-body">
+          <div class="card-title">タイトル 4</div>
+          <div class="card-line"></div>
+          <div class="card-line" style="width:65%"></div>
+        </div>
+      </div><div class="grid-card">
+        <div class="card-img">写真</div>
+        <div class="card-body">
+          <div class="card-title">タイトル 5</div>
+          <div class="card-line"></div>
+          <div class="card-line" style="width:65%"></div>
+        </div>
+      </div><div class="grid-card">
+        <div class="card-img">写真</div>
+        <div class="card-body">
+          <div class="card-title">タイトル 6</div>
+          <div class="card-line"></div>
+          <div class="card-line" style="width:65%"></div>
+        </div>
+      </div></div>
+    <div class="pagination"><div class="page-btn active">1</div><div class="page-btn">2</div><div class="page-btn">›</div></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"></div>
+      <div style="color:#888;font-size:13px;">平等大慧会</div>
+      <div class="footer-copy">〒xxx-xxxx 住所テキスト</div>
+    </div>
+    <div class="footer-nav">
+      <span>平等大慧会について</span>
+      <span>教えについて</span>
+      <span>入会後の活動</span>
+      <span>お知らせ</span>
+      <span>交通アクセス</span>
+      <span>お問い合わせ</span>
+      <span>プライバシーポリシー</span>
+    </div>
+  </div>
+  <div class="footer-bottom">© 平等大慧会 All Rights Reserved.</div>
+</footer>
+</body>
+</html>
