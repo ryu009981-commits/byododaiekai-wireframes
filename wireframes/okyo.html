@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[WF] お経典について — 平等大慧会</title>
+<script src="auth.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic Pro','Yu Gothic',sans-serif;background:#fff;color:#222}
+.hdr{background:#1a1a1a;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+.hdr .logo{background:#3a3a3a;width:180px;height:34px;border-radius:2px;display:flex;align-items:center;justify-content:center}
+.hdr .logo span{color:#bbb;font-size:12px;font-style:italic}
+.hdr nav{display:flex;gap:18px}
+.hdr nav a{color:#bbb;font-size:12px;text-decoration:none}
+.hero{background:#222;padding:36px 32px 28px}
+.hero .en{color:#666;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+.hero h1{color:#fff;font-size:26px;font-weight:normal}
+.bc{background:#f8f6f2;padding:10px 32px;font-size:11px;color:#999;border-bottom:1px solid #eee}
+.bc span{color:#ccc;margin:0 5px}
+.wrap{max-width:960px;margin:0 auto;padding:40px 32px}
+.two-col{display:grid;grid-template-columns:1fr 210px;gap:36px}
+.rnav{background:#f7f5f2;border-left:3px solid #222;padding:16px 18px}
+.rnav .rt{font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.rnav ul{list-style:none}
+.rnav ul li{padding:7px 0;border-bottom:1px solid #e8e8e8;font-size:12px;color:#444}
+.rnav ul li.on{color:#222;font-weight:bold}
+.rnav ul li::before{content:'› ';color:#aaa}
+.sec{margin-bottom:40px}
+.sh{font-size:16px;font-weight:bold;color:#222;padding-bottom:8px;border-bottom:2px solid #222;margin-bottom:16px}
+.sh.sm{font-size:13px;border-bottom-color:#ccc;color:#555}
+.img{background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#666;font-size:11px;border-radius:2px}
+.img.hero-img{width:100%;height:280px;margin-bottom:24px}
+.img.mid{width:100%;height:200px;margin-bottom:16px}
+.img.sm-img{width:100%;height:150px}
+.img.sq{width:160px;height:160px;flex-shrink:0}
+.img.map{width:100%;height:360px;margin-bottom:28px}
+.img.thumb{width:220px;height:150px;flex-shrink:0}
+.tl{background:#ddd;height:12px;border-radius:2px;margin-bottom:8px}
+.tl.full{width:100%}.tl.w90{width:90%}.tl.w75{width:75%}.tl.w55{width:55%}
+.row{display:flex;gap:18px;margin-bottom:18px}
+.row .txt{flex:1}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:#fff;border:1px solid #ddd;border-radius:2px;overflow:hidden}
+.card .ci{background:#2a2a2a;height:130px;display:flex;align-items:center;justify-content:center;color:#666;font-size:11px}
+.card .cb{padding:12px}
+.card .ct{font-size:12px;font-weight:bold;margin-bottom:6px}
+.card .cl{background:#ddd;height:10px;border-radius:2px;margin-bottom:5px}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{padding:12px 14px;border:1px solid #ddd;font-size:13px;vertical-align:top}
+.tbl th{background:#f5f2ee;font-weight:bold;text-align:left;width:160px}
+.list-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #eee}
+.list-date{font-size:12px;color:#888;white-space:nowrap;min-width:85px}
+.list-cat{background:#222;color:#fff;font-size:10px;padding:2px 7px;white-space:nowrap}
+.list-body{flex:1}
+.list-t{background:#ddd;height:12px;border-radius:2px;width:80%;margin-bottom:5px}
+.list-s{background:#e8e8e8;height:9px;border-radius:2px;width:55%}
+.ftbl{width:100%;border-collapse:collapse}
+.ftbl th{width:160px;background:#f5f2ee;padding:13px 14px;text-align:left;font-size:13px;border-bottom:1px solid #ddd;vertical-align:top}
+.ftbl td{padding:13px 14px;border-bottom:1px solid #ddd}
+.fi{background:#fff;border:1px solid #ccc;height:34px;width:100%;border-radius:2px}
+.fta{background:#fff;border:1px solid #ccc;height:90px;width:100%;border-radius:2px}
+.req{color:#c00;font-size:10px;margin-left:4px}
+.btn{display:inline-block;background:#222;color:#fff;padding:11px 36px;font-size:13px;border-radius:2px;text-decoration:none;cursor:pointer}
+.btn.out{background:#fff;color:#222;border:1px solid #222}
+.bw{text-align:center;margin-top:24px}
+.pg{display:flex;justify-content:center;gap:6px;margin-top:28px}
+.pgb{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:1px solid #ccc;font-size:12px;background:#fff;color:#555}
+.pgb.on{background:#222;color:#fff;border-color:#222}
+.tabs{display:flex;border-bottom:2px solid #222;margin-bottom:20px}
+.tab{padding:9px 22px;font-size:13px;color:#888;border:1px solid #ddd;border-bottom:none;margin-right:3px;background:#f5f5f5}
+.tab.on{background:#222;color:#fff;border-color:#222}
+.nk{border-bottom:1px solid #eee;display:flex;gap:0;padding:10px 0}
+.nk-m{min-width:55px;font-size:12px;font-weight:bold;color:#555}
+.nk-e{flex:1;font-size:12px;color:#333;line-height:1.7}
+.ftr{background:#1a1a1a;margin-top:80px;padding:36px 32px}
+.fi2{max-width:960px;margin:0 auto;display:flex;justify-content:space-between}
+.fl{background:#333;width:130px;height:30px;border-radius:2px;margin-bottom:10px}
+.fa{color:#666;font-size:11px;line-height:1.8}
+.fn{column-count:2;column-gap:28px}
+.fn a{display:block;color:#888;font-size:11px;padding:3px 0;text-decoration:none}
+.fb{border-top:1px solid #2e2e2e;max-width:960px;margin:18px auto 0;padding-top:12px;text-align:center;color:#555;font-size:10px}
+a{color:inherit;text-decoration:none}</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="logo"><span>平等大慧会</span></div>
+  <nav>
+    <a href="#">平等大慧会について</a>
+    <a href="#">観光・散策</a>
+    <a href="#">育成プログラム</a>
+    <a href="#">平和・文化活動</a>
+    <a href="#">救援活動</a>
+    <a href="#">お知らせ</a>
+    <a href="#">交通アクセス</a>
+  </nav>
+</header>
+<div class="hero"><div class="en">About the Sutra</div><h1>お経典について</h1></div>
+<div class="bc"><a href="#">トップ</a> <span>›</span> 平等大慧会について <span>›</span> お経典について</div>
+
+<div class="wrap"><div class="two-col"><div>
+  <div class="sec">
+    <div class="img hero-img">画像（お経典）</div>
+    <div class="tl full"></div><div class="tl full"></div><div class="tl w90"></div><div class="tl full"></div><div class="tl w75"></div><div class="tl w55"></div>
+  </div>
+  <div class="sec"><div class="sh">妙法華経とは</div><div class="tl full"></div><div class="tl full"></div><div class="tl w90"></div><div class="tl w75"></div><div class="tl w55"></div></div>
+  <div class="sec"><div class="img mid">画像（経文・釈尊）</div><div class="tl full"></div><div class="tl full"></div><div class="tl w75"></div><div class="tl w55"></div></div>
+  <div class="sec"><div class="sh">お経典の意義</div><div class="tl full"></div><div class="tl full"></div><div class="tl w90"></div><div class="tl w75"></div><div class="tl w55"></div></div>
+</div><div><div class="rnav"><div class="rt">関連ページ</div><ul><li>教えについて</li><li  class="on">お経典について</li><li>七色十字の理念について</li><li>体験談</li></ul></div></div></div></div>
+<footer class="ftr">
+  <div class="fi2">
+    <div><div class="fl"></div>
+      <div class="fa">宗教法人 平等大慧会<br>〒xxx-xxxx 広島県廿日市市大野xxx<br>TEL: 0xx-xxx-xxxx</div>
+    </div>
+    <div class="fn">
+      <a href="#">平等大慧会とは</a><a href="#">王舍城はなぜここに？</a>
+      <a href="#">歴代会長の経歴</a><a href="#">施設紹介</a>
+      <a href="#">各地の道場</a><a href="#">教えについて</a>
+      <a href="#">お経典について</a><a href="#">七色十字の理念</a>
+      <a href="#">体験談</a><a href="#">入会後の活動</a>
+      <a href="#">育成プログラム</a><a href="#">平和・文化活動</a>
+      <a href="#">救援活動</a><a href="#">交通アクセス</a>
+      <a href="#">お知らせ</a><a href="#">お問い合わせ</a>
+      <a href="#">プライバシーポリシー</a><a href="#">サイトマップ</a>
+    </div>
+  </div>
+  <div class="fb">© 宗教法人 平等大慧会 All Rights Reserved.</div>
+</footer>
+</body></html>
