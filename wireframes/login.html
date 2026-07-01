@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>閲覧認証 - 平等大慧会 ワイヤーフレーム</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Hiragino Kaku Gothic Pro', sans-serif;
+  background: #f0ece7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 48px 40px;
+  width: 360px;
+  text-align: center;
+}
+.logo-bar {
+  background: #1a1a1a;
+  height: 6px;
+  border-radius: 2px;
+  margin-bottom: 32px;
+}
+h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 28px;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  outline: none;
+}
+input[type="password"]:focus {
+  border-color: #1a1a1a;
+}
+button {
+  width: 100%;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+button:hover { background: #333; }
+.error {
+  color: #c00;
+  font-size: 13px;
+  margin-top: 12px;
+  display: none;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo-bar"></div>
+  <h1>平等大慧会 ワイヤーフレーム</h1>
+  <p>閲覧にはパスワードが必要です</p>
+  <input type="password" id="pw" placeholder="パスワードを入力" />
+  <button onclick="check()">閲覧する</button>
+  <div class="error" id="err">パスワードが違います</div>
+</div>
+<script>
+var PW = 'itlinedaiekai';
+function check() {
+  var val = document.getElementById('pw').value;
+  if (val === PW) {
+    sessionStorage.setItem('wf_auth', '1');
+    var params = new URLSearchParams(location.search);
+    var redirect = params.get('redirect');
+    if (redirect && redirect.indexOf(location.origin) === 0) {
+      location.href = redirect;
+    } else {
+      location.href = 'index.html';
+    }
+  } else {
+    document.getElementById('err').style.display = 'block';
+  }
+}
+document.getElementById('pw').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') check();
+});
+</script>
+</body>
+</html>
