@@ -10,11 +10,11 @@ body { font-family: 'Hiragino Kaku Gothic Pro', sans-serif; background: #f5f2ee;
 h1 { font-size: 20px; font-weight: bold; margin-bottom: 6px; }
 .sub { font-size: 12px; color: #999; margin-bottom: 36px; }
 .group { margin-bottom: 36px; }
-.group-title { font-size: 11px; font-weight: bold; color: #888; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 14px; }
+.group-title { font-size: 11px; font-weight: bold; color: #888; letter-spacing: 2px; text-transform: uppercase; border-bottom: 2px solid #2c3e35; padding-bottom: 8px; margin-bottom: 14px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
 .card { background: #fff; border: 1px solid #ddd; border-radius: 2px; overflow: hidden; text-decoration: none; color: inherit; display: block; }
-.card:hover { border-color: #1a1a1a; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
-.card-bar { background: #1a1a1a; height: 6px; }
+.card:hover { border-color: #2c3e35; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+.card-bar { background: #2c3e35; height: 5px; }
 .card-body { padding: 12px 14px; }
 .card-body .title { font-size: 13px; font-weight: bold; margin-bottom: 3px; }
 .card-body .file { font-size: 10px; color: #bbb; }
@@ -22,7 +22,14 @@ h1 { font-size: 20px; font-weight: bold; margin-bottom: 6px; }
 </head>
 <body>
 <h1>ワイヤーフレーム一覧</h1>
-<p class="sub">平等大慧会 下層ページワイヤーフレーム — サイトマップ(新案).xlsx 準拠</p>
+<p class="sub">平等大慧会 下層ページワイヤーフレーム — Canvaワイヤーフレーム準拠</p>
+
+<div class="group">
+  <div class="group-title">ランディング</div>
+  <div class="grid">
+    <a class="card" href="landing.html"><div class="card-bar"></div><div class="card-body"><div class="title">教えについて知りたい方</div><div class="file">landing.html</div></div></a>
+  </div>
+</div>
 
 <div class="group">
   <div class="group-title">平等大慧会について</div>
@@ -61,12 +68,14 @@ h1 { font-size: 20px; font-weight: bold; margin-bottom: 6px; }
 </div>
 
 <div class="group">
-  <div class="group-title">育成プログラム</div>
+  <div class="group-title">教育活動</div>
   <div class="grid">
+    <a class="card" href="kyoiku.html"><div class="card-bar"></div><div class="card-body"><div class="title">教育活動（プログラム概要）</div><div class="file">kyoiku.html</div></div></a>
     <a class="card" href="scc-shonen.html"><div class="card-bar"></div><div class="card-body"><div class="title">SCC少年団</div><div class="file">scc-shonen.html</div></div></a>
     <a class="card" href="scc-hayabusa.html"><div class="card-bar"></div><div class="card-body"><div class="title">SCC青年団はやぶさ隊</div><div class="file">scc-hayabusa.html</div></div></a>
     <a class="card" href="scc-seinen.html"><div class="card-bar"></div><div class="card-body"><div class="title">SCC青年団</div><div class="file">scc-seinen.html</div></div></a>
     <a class="card" href="heiyo-shugakuin.html"><div class="card-bar"></div><div class="card-body"><div class="title">平等修学院</div><div class="file">heiyo-shugakuin.html</div></div></a>
+    <a class="card" href="nenko.html"><div class="card-bar"></div><div class="card-body"><div class="title">年間行事</div><div class="file">nenko.html</div></div></a>
   </div>
 </div>
 
