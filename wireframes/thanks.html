@@ -7,11 +7,11 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Hiragino Kaku Gothic Pro','Yu Gothic',sans-serif;background:#fff;color:#222}
-.hdr{background:#1a1a1a;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 32px}
-.hdr .logo{background:#3a3a3a;width:180px;height:34px;border-radius:2px;display:flex;align-items:center;justify-content:center}
+.hdr{background:#1a1a1a;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;flex-wrap:nowrap}
+.hdr .logo{background:#3a3a3a;width:180px;height:34px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hdr .logo span{color:#bbb;font-size:12px;font-style:italic}
 .hdr nav{display:flex;gap:18px}
-.hdr nav a{color:#bbb;font-size:12px;text-decoration:none}
+.hdr nav a{color:#bbb;font-size:12px;text-decoration:none;white-space:nowrap}
 .hero{background:#222;padding:36px 32px 28px}
 .hero .en{color:#666;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
 .hero h1{color:#fff;font-size:26px;font-weight:normal}
