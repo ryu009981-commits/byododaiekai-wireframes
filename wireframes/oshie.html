@@ -8,111 +8,35 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Hiragino Kaku Gothic Pro','Yu Gothic',sans-serif;background:#fff;color:#222;font-size:14px;line-height:1.8}
 a{color:inherit;text-decoration:none}
-
-/* Header */
 .hdr{background:#1a1a1a;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 28px}
 .hdr-logo{color:#fff;font-size:14px;letter-spacing:1px;flex-shrink:0}
 .hdr-nav{display:flex;gap:20px}
 .hdr-nav a{color:#ccc;font-size:11px;white-space:nowrap}
-
-/* Hero */
 .hero{background:linear-gradient(135deg,#2c3e35 0%,#1a2820 40%,#0f1f18 100%);min-height:160px;display:flex;align-items:center;justify-content:center;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#4a8c6a,#2d6b4a,#4a8c6a)}
 .hero h1{color:#fff;font-size:24px;font-weight:normal;letter-spacing:2px;text-align:center;padding:40px 20px}
-
-/* Breadcrumb */
 .bc{background:#f5f3ef;padding:8px 24px;font-size:11px;color:#888;border-bottom:1px solid #ebe9e5}
-
-/* Layout */
 .wrap{max-width:860px;margin:0 auto;padding:36px 24px}
 .two-col{display:grid;grid-template-columns:1fr 200px;gap:32px;align-items:start}
-
-/* Related nav */
 .rnav{border:1px solid #ddd}
 .rnav .rt{background:#2c3e35;color:#fff;font-size:11px;padding:8px 14px;letter-spacing:1px}
 .rnav ul{list-style:none}
 .rnav ul li{border-bottom:1px solid #eee}
 .rnav ul li a{display:block;padding:9px 14px;font-size:12px;color:#444}
-.rnav ul li a:hover{background:#f8f8f8}
 .rnav ul li.on a{background:#f0ece8;font-weight:bold;color:#222}
-
-/* Sections */
 .sec{margin-bottom:36px}
-.sh{font-size:16px;font-weight:bold;color:#222;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #ccc}
-.sh2{font-size:14px;font-weight:bold;color:#333;margin:20px 0 10px;padding-left:10px;border-left:3px solid #4a8c6a}
-
-/* Image placeholders */
+.sh{font-size:16px;font-weight:bold;color:#222;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #2c3e35}
+.sh2{font-size:14px;font-weight:bold;color:#333;margin:24px 0 10px;padding-left:10px;border-left:3px solid #4a8c6a}
 .img-ph{background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;border-radius:2px;font-style:italic}
-.img-hero{width:100%;height:260px;margin-bottom:22px}
 .img-lg{width:100%;height:220px;margin-bottom:18px}
-.img-md{width:100%;height:180px;margin-bottom:14px}
-.img-sm{width:100%;height:140px;margin-bottom:12px}
-.img-sq{width:150px;height:150px;flex-shrink:0}
-.img-half{width:100%;height:160px}
-.img-vid{width:100%;height:200px;margin:20px 0;position:relative}
-.img-vid::before{content:'▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#666;font-size:24px}
-
-/* Text */
+.img-side{width:180px;height:150px;flex-shrink:0}
 .body-txt{color:#444;font-size:13px;line-height:2;margin-bottom:14px}
-.caption{font-size:11px;color:#888;margin-top:6px;line-height:1.6}
-
-/* Two-col content */
-.row2{display:flex;gap:20px;margin-bottom:24px;align-items:flex-start}
+.row2{display:flex;gap:20px;margin-bottom:20px;align-items:flex-start}
 .row2.rev{flex-direction:row-reverse}
-.row2 .txt{flex:1}
-.row2 .img-side{width:180px;flex-shrink:0}
-
-/* Card grid (体験談) */
-.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
-.card{border:1px solid #ddd;border-radius:2px;overflow:hidden}
-.card .ci{background:#2a2a2a;height:160px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;font-style:italic}
-.card .cb{padding:12px 14px}
-.card .ctitle{font-size:13px;font-weight:bold;margin-bottom:4px}
-.card .cmeta{font-size:11px;color:#888;margin-bottom:8px}
-.card .ctag{display:inline-block;background:#2c3e35;color:#fff;font-size:10px;padding:2px 8px;border-radius:1px}
-
-/* Timeline / history */
-.timeline{list-style:none}
-.timeline li{display:flex;gap:16px;padding:8px 0;border-bottom:1px solid #eee;font-size:12px}
-.timeline li .dt{color:#888;white-space:nowrap;min-width:140px}
-.timeline li .ev{flex:1;color:#444}
-
-/* Annual events table */
-.evt-tbl{width:100%;border-collapse:collapse}
-.evt-tbl tr{border-bottom:1px solid #eee}
-.evt-tbl td{padding:12px 8px;font-size:13px;vertical-align:top}
-.evt-tbl td:first-child{white-space:nowrap;color:#888;min-width:90px}
-
-/* Button */
-.btn{display:inline-block;border:1px solid #2c3e35;color:#2c3e35;padding:8px 24px;font-size:12px;letter-spacing:1px;margin-top:12px}
-
-/* Section cards (年間行事) */
-.sec-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-.sec-card{background:#2c3e35;color:#fff;padding:18px;text-align:center;font-size:13px;letter-spacing:1px}
-.sec-card::before{content:'› '}
-
-/* Contents nav */
-.contents{background:#f5f3ef;padding:16px 20px;margin-bottom:24px;border-left:3px solid #4a8c6a}
-.contents .ct-title{font-size:11px;color:#888;margin-bottom:8px;letter-spacing:1px}
-.contents ol{padding-left:20px;color:#444;font-size:13px;line-height:2}
-
-/* Pagination */
-.pg{display:flex;justify-content:center;gap:4px;margin-top:24px}
-.pgb{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #ccc;font-size:12px}
-.pgb.on{background:#2c3e35;color:#fff;border-color:#2c3e35}
-
-/* Form */
-.ftbl{width:100%;border-collapse:collapse}
-.ftbl th,.ftbl td{padding:12px 14px;border-bottom:1px solid #eee;vertical-align:top;font-size:13px}
-.ftbl th{background:#f8f6f3;width:160px;font-weight:normal}
-.fi{background:#fff;border:1px solid #ccc;height:34px;width:100%}
-.fta{background:#fff;border:1px solid #ccc;height:80px;width:100%}
-.req{color:#c00;font-size:10px;margin-left:4px}
-
-/* Map */
-.map-ph{background:#2a2a2a;width:100%;height:340px;display:flex;align-items:center;justify-content:center;color:#666;font-size:13px;margin-bottom:24px}
-
-/* Footer */
+.row2 .txt{flex:1;min-width:0}
+.okuyo-list{list-style:none;margin:10px 0 14px;padding:0}
+.okuyo-list li{padding:6px 0 6px 18px;border-bottom:1px solid #eee;font-size:13px;color:#444;position:relative}
+.okuyo-list li::before{content:'›';position:absolute;left:0;color:#4a8c6a}
 .ftr{background:#1a1a1a;margin-top:60px;padding:28px 24px 0}
 .ftr-inner{max-width:860px;margin:0 auto}
 .ftr-search{display:flex;gap:12px;margin-bottom:24px}
@@ -133,66 +57,102 @@ a{color:inherit;text-decoration:none}
 <header class="hdr">
   <div class="hdr-logo">平等大慧会</div>
   <nav class="hdr-nav">
-    <a href="#">教えについて</a>
-    <a href="#">観光・散策</a>
-    <a href="#">教育活動</a>
-    <a href="#">平和・文化活動</a>
-    <a href="#">救援活動</a>
-    <a href="#">交通アクセス</a>
-    <a href="#">お知らせ</a>
-    <a href="#">お問い合わせ</a>
+    <a href="#">教えについて</a><a href="#">観光・散策</a><a href="#">教育活動</a>
+    <a href="#">平和・文化活動</a><a href="#">救援活動</a><a href="#">交通アクセス</a>
+    <a href="#">お知らせ</a><a href="#">お問い合わせ</a>
   </nav>
 </header>
 <div class="hero"><h1>教えについて</h1></div>
-<div class="bc"><a href="#">トップ</a> › 教えについて › 教えについて</div>
+<div class="bc"><a href="#">トップ</a> › 教えについて知りたい方 › 教えについて</div>
 
 <div class="wrap">
   <div class="two-col">
     <div>
+      <!-- 概要 -->
       <div class="sec">
         <p class="sh">教えについて</p>
-        <div class="img-ph img-lg">画像が入ります。</div>
+        <div class="img-ph img-lg">画像（本尊・お経典）</div>
         <p class="body-txt">当会の教えでは、真実のお経典である「妙法華経」をもとに、日に見える世界（この世）と日に見えない世界（あの世）の両方に通じる大宇宙の法則の全体が説かれています。</p>
-        <p class="body-txt">橋梁は、この教えを日々実践していくことで、自分が幸せになるだけでなく、周りの方々も幸せになることができると教えられています。そして、その意命の広がりの中で、大縁や花植物も植物も、生きとし生けるすべてのものが幸せになることを当会は目指しています。</p>
-        <p class="body-txt">※妙法華経は当会会員のみに公開されています。</p>
+        <p class="body-txt">この教えを日々実践していくことで、自分が幸せになるだけでなく、周りの方々も幸せになることができます。そして、その輪の広がりの中で、生きとし生けるすべてのものが幸せになることを当会は目指しています。</p>
+        <p class="body-txt" style="font-size:12px;color:#888;">※ 妙法華経は当会会員のみに公開されています。</p>
       </div>
+
+      <!-- お供養 -->
       <div class="sec">
         <p class="sh">お供養</p>
-        <p class="body-txt">当会の教えの中で重点かれていることの一つに、感謝のお供養になっています。三つのお供養：食物のお供養をすることが形で、それらに対してただごとの供養を受けるだけでなく、実際にお経典をあげることでお供養することになります。それらの恩恵を受けることで、食物が口から消まる、ものも感謝され、ほとんど等分に増分に添えることができます。</p>
-      </div>
-      <div class="sec">
-        <p class="sh2">ご先祖のお供養</p>
+        <p class="body-txt">私たちは様々なものの恩恵を受けて生きています。当会の教えでは、誰もがお世話になっている、次の三つの親をお供養することが説かれています。ただ心の中で感謝するだけでなく、実際にお経をあげることで、相手の魂を楽にすることができ、それがお供養になります。</p>
+        <ul class="okuyo-list">
+          <li>ご祖先のお供養</li>
+          <li>飲食物のお供養</li>
+          <li>大自然のお供養</li>
+        </ul>
+        <p class="body-txt">お供養をする人のところには、次第に善いものが集まってくるようになり、物にも恵まれ、精神的にも豊かに過ごせるようになります。</p>
+
+        <p class="sh2">ご祖先のお供養</p>
         <div class="row2">
-          <p class="body-txt">私たちは、必ず先祖から生まれています。この流れは途切れてなく続き、そのもちろんも誰かの子供ではありましたが、ちも分自身は生まれてきていません。真実のお経典によれば、お経典をあげてご先祖のお供養をすることで、その方のご縁だけでなく私たちや子孫も悩みや辛さを解決し、幸せになることができます。さらに、家縁の絆が深まり、悩みたちも子孫も悩みと辛さが解決し、豊かで幸せな人生を送れるようになります。</p>
-          <div class="img-ph img-half">画像が入ります。</div>
+          <div class="txt">
+            <p class="body-txt">私たちは、必ず先祖から生まれています。この流れは途切れることなく続き、ご先祖がいなければ自分自身は生まれてきていません。真実のお経典によれば、お経をあげてご先祖のお供養をすることで、その方のご先祖だけでなく私たちや子孫の幸せにもつながります。</p>
+          </div>
+          <div class="img-ph img-side">画像（ご先祖供養）</div>
         </div>
-        <div class="row2" style="margin-top:16px;">
-          <p class="body-txt">子孫の幸せが祖先を慰める伴侶供養物をあげると、そのほかに先祖に届き、先祖は正しい世界から来るもの豊かにな幸せになります。供物が充り、善い幸せになっていくと、遠くから私たちの元に戻ってきます。もっとも、悪いものだけで供養を続けていくと、今度は世界のものが出てくる「悩みの繋」という因果を生ずることができると言われており、それによって幸せと満足が満ち溢れるようになります。</p>
-          <div class="img-ph img-half">画像が入ります。</div>
-        </div>
-      </div>
-      <div class="sec">
+
         <p class="sh2">飲食物のお供養</p>
         <div class="row2 rev">
-          <div class="img-ph img-half">画像が入ります。</div>
-          <p class="body-txt">私たちは、毎日さまざまな食べ物を食べ、命を繋いでいくことができます。ご先祖のお経典を供養することができます。お教室のお供養をすることも食べ物を供養することになります。当会では、私たちは日々のいただく命の食事を受けています。当会の方法によると、その供養のお供養のそれぞれを取り入れ、感謝の飲食物を受けているということになります。そして飲食物のお供養もするには、食べ物に向かいたというお体に対して、感謝を心がけることが大切です。</p>
+          <div class="img-ph img-side">画像（飲食物供養）</div>
+          <div class="txt">
+            <p class="body-txt">私たちは、毎日さまざまな食べ物を食べ、命を繋いでいます。生き物の命を頂くことは、大自然の営みからみると「罪」にあたります。当会の教えでは、日々いただく飲食物に対してお経をあげてお供養することが説かれており、感謝の心を形にすることができます。</p>
+          </div>
         </div>
-      </div>
-      <div class="sec">
+
         <p class="sh2">大自然のお供養</p>
         <div class="row2">
-          <p class="body-txt">私たちは、毎日中央、天候、太陽、風薄、エネルギーなど、大自然の恩恵を受けています。太陽を観察することができます。また、大自然への帰り込まれており、気候によって生きていることができます。また、大自然を切り込まれての習慣があり、当会の教えでは、その偉榮の私たちがそれを生かすことができます。</p>
-          <div class="img-ph img-half">画像が入ります。</div>
+          <div class="txt">
+            <p class="body-txt">私たちは、毎日太陽・風・水・空気など、大自然の恩恵を受けています。当会の教えでは、その偉大な大自然に対しても感謝してお供養することが説かれています。大自然へのお供養を続けることで、生活全体に調和と豊かさがもたらされます。</p>
+          </div>
+          <div class="img-ph img-side">画像（大自然）</div>
         </div>
       </div>
+
+      <!-- 因縁の解結 -->
       <div class="sec">
-        <p class="sh">困ることの解結（解決）</p>
-        <p class="body-txt">お経典をあげることで、善のない出来事からぬ困りものや問題を解結することができます。この「解結」とは、問題の根本的な原因（因縁）を解消するという考え方です。当会の教えでは、私たちが日常で困っていること全ては、前世の因縁（お先祖様の悪縁）が原因と考えています。それをお経典をあげ、ご供養とすることで解消することができます。</p>
+        <p class="sh">因縁の解結</p>
+        <div class="row2">
+          <div class="txt">
+            <p class="body-txt">日々の生活の中で、困ることや、辛い思いをすることは誰にでもあります。病気や事故にあったり、人間関係や経済的なことで悩む人もいます。時間が経てばその記憶も薄れていきますが、実際には、因縁の解結ができていないと、困ることは形を変えて何度でも起きてきます。</p>
+            <p class="body-txt">当会の教えでは、過去世から自分の魂に付いている悪いものを取り除いて、因縁を解結する方法が説かれています。他人のことを恨んだり憎んだりするのではなく、根本から因縁を解結し、困ることから逃れることで、幸せな人生を送ることができます。</p>
+          </div>
+          <div class="img-ph img-side">画像（因縁の解結）</div>
+        </div>
+      </div>
+
+      <!-- 救世者 -->
+      <div class="sec">
+        <p class="sh">救世者になるための教え</p>
+        <div class="row2 rev">
+          <div class="img-ph img-side">画像（活動風景）</div>
+          <div class="txt">
+            <p class="body-txt">佛様の真実の教えでは、世の中のすべてを救う方法が説かれています。その方法に従えば、自分が幸せになるだけでなく、周りの人を幸せにすることもできます。</p>
+            <p class="body-txt">当会は、世の中を救う「救世者（ぐせしゃ）」の育成を目的の一つとしています。また、人のためにと思って行うことが、結果的には自分のためにもなり、本当の幸せにつながります。</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="rnav"><div class="rt">関連ページ</div><ul><li><a href="okyo.html">お経典について</a></li><li><a href="shichishoku.html">七色十字の理念について</a></li><li><a href="taiken.html">体験談</a></li></ul></div>
+
+    <div>
+      <div class="rnav">
+        <div class="rt">関連ページ</div>
+        <ul>
+          <li class="on"><a href="oshie.html">教えについて</a></li>
+          <li><a href="okyo.html">お経典について</a></li>
+          <li><a href="shichishoku.html">七色十字の理念について</a></li>
+          <li><a href="taiken.html">体験談</a></li>
+          <li><a href="nyukai.html">入会後の活動</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
+
 <footer class="ftr">
   <div class="ftr-inner">
     <div class="ftr-search">
@@ -204,24 +164,15 @@ a{color:inherit;text-decoration:none}
       <div>
         <div class="ftr-logo">平等大慧会</div>
         <div class="ftr-addr">宗教法人 平等大慧会<br>〒739-0452 広島県廿日市市大野xxx<br>TEL: 0xx-xxx-xxxx</div>
-        <div class="ftr-sns">
-          <div class="ftr-snsb">IG</div>
-          <div class="ftr-snsb">FB</div>
-        </div>
+        <div class="ftr-sns"><div class="ftr-snsb">IG</div><div class="ftr-snsb">FB</div></div>
       </div>
       <div class="ftr-nav">
-        <a href="#">教えについて知りたい方</a>
-        <a href="#">観光・散策をされたい方へ</a>
-        <a href="#">教育活動</a>
-        <a href="#">平和・文化活動</a>
-        <a href="#">交通アクセス</a>
-        <a href="#">体験談</a>
-        <a href="#">お知らせ</a>
-        <a href="#">お問い合わせ</a>
-        <a href="#">会員向けページ</a>
-        <a href="#">平等大慧会基本情報</a>
-        <a href="#">このサイトについて プライバシーポリシー</a>
-        <a href="#">サイトマップ</a>
+        <a href="#">教えについて知りたい方</a><a href="#">観光・散策をされたい方へ</a>
+        <a href="#">教育活動</a><a href="#">平和・文化活動</a>
+        <a href="#">交通アクセス</a><a href="#">体験談</a>
+        <a href="#">お知らせ</a><a href="#">お問い合わせ</a>
+        <a href="#">会員向けページ</a><a href="#">平等大慧会基本情報</a>
+        <a href="#">プライバシーポリシー</a><a href="#">サイトマップ</a>
       </div>
     </div>
     <div class="ftr-copy">© 宗教法人 平等大慧会 All Rights Reserved.</div>
