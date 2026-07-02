@@ -17,23 +17,16 @@ a{color:inherit;text-decoration:none}
 .hero h1{color:#fff;font-size:24px;font-weight:normal;letter-spacing:2px;text-align:center;padding:40px 20px}
 .bc{background:#f5f3ef;padding:8px 24px;font-size:11px;color:#888;border-bottom:1px solid #ebe9e5}
 .wrap{max-width:860px;margin:0 auto;padding:36px 24px}
-.two-col{display:grid;grid-template-columns:1fr 200px;gap:32px;align-items:start}
-.rnav{border:1px solid #ddd}
-.rnav .rt{background:#2c3e35;color:#fff;font-size:11px;padding:8px 14px;letter-spacing:1px}
-.rnav ul{list-style:none}
-.rnav ul li{border-bottom:1px solid #eee}
-.rnav ul li a{display:block;padding:9px 14px;font-size:12px;color:#444}
-.rnav ul li.on a{background:#f0ece8;font-weight:bold;color:#222}
-.sec{margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #eee}
+.sec{margin-bottom:0;padding:36px 0;border-bottom:1px solid #eee}
 .sec:last-child{border-bottom:none}
 .sh{font-size:16px;font-weight:bold;color:#222;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #2c3e35}
 .img-ph{background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;border-radius:2px;font-style:italic}
-.img-side{width:180px;height:150px;flex-shrink:0}
-.body-txt{color:#444;font-size:13px;line-height:2;margin-bottom:14px}
-.row2{display:flex;gap:20px;margin-bottom:20px;align-items:flex-start}
+.row2{display:flex;gap:24px;align-items:flex-start}
 .row2.rev{flex-direction:row-reverse}
 .row2 .txt{flex:1;min-width:0}
-.btn{display:inline-block;border:1px solid #2c3e35;color:#2c3e35;padding:8px 24px;font-size:12px;letter-spacing:1px;margin-top:4px}
+.row2 .img-side{width:45%;flex-shrink:0;height:240px}
+.body-txt{color:#444;font-size:13px;line-height:2;margin-bottom:14px}
+.btn{display:inline-block;border:1px solid #2c3e35;color:#2c3e35;padding:8px 24px;font-size:12px;letter-spacing:1px;margin-top:8px}
 .ftr{background:#1a1a1a;margin-top:60px;padding:28px 24px 0}
 .ftr-inner{max-width:860px;margin:0 auto}
 .ftr-search{display:flex;gap:12px;margin-bottom:24px}
@@ -63,58 +56,43 @@ a{color:inherit;text-decoration:none}
 <div class="bc"><a href="#">トップ</a> › 教えについて知りたい方</div>
 
 <div class="wrap">
-  <div class="two-col">
-    <div>
-      <!-- 平等大慧会について -->
-      <div class="sec">
+
+  <!-- 平等大慧会について -->
+  <div class="sec">
+    <div class="row2">
+      <div class="img-ph img-side">画像が入ります。</div>
+      <div class="txt">
         <p class="sh">平等大慧会について</p>
-        <div class="row2">
-          <div class="txt">
-            <p class="body-txt">平等大慧会は、佛様の真実の教えである「妙法華経」をもとに、人々の幸せと世界平和を目指す宗教法人です。当会の教えでは、日に見える世界と日に見えない世界の両方に通じる大宇宙の法則が説かれており、この教えを日々実践することで、自分だけでなく周りの方々も幸せになることができます。</p>
-            <a class="btn" href="about.html">› 詳しくはこちら</a>
-          </div>
-          <div class="img-ph img-side">画像が入ります。</div>
-        </div>
-      </div>
-
-      <!-- 教えについてふれる -->
-      <div class="sec">
-        <p class="sh">教えについてふれる</p>
-        <div class="row2 rev">
-          <div class="img-ph img-side">画像が入ります。</div>
-          <div class="txt">
-            <p class="body-txt">当会の教えでは「お供養」「因縁の解結」「救世者になるための教え」が説かれています。ご祖先・飲食物・大自然へのお供養を日々実践することで、自分の魂が清まり、困ることから逃れて幸せな人生を歩むことができます。</p>
-            <a class="btn" href="oshie.html">› 詳しくはこちら</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 入会後の活動について -->
-      <div class="sec">
-        <p class="sh">入会後の活動について</p>
-        <div class="row2">
-          <div class="txt">
-            <p class="body-txt">入会後は、お経をあげる・念願をする・ご祖先のお供養・善い名前を頂戴するなど、様々な活動を自分の生活のペースに合わせて行うことができます。本部または支部の行事にも参加できます。</p>
-            <a class="btn" href="nyukai.html">› 詳しくはこちら</a>
-          </div>
-          <div class="img-ph img-side">画像が入ります。</div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="rnav">
-        <div class="rt">関連ページ</div>
-        <ul>
-          <li class="on"><a href="landing.html">教えについて知りたい方</a></li>
-          <li><a href="about.html">平等大慧会について</a></li>
-          <li><a href="oshie.html">教えについて</a></li>
-          <li><a href="nyukai.html">入会後の活動について</a></li>
-          <li><a href="taiken.html">体験談</a></li>
-        </ul>
+        <p class="body-txt">平等大慧会は、佛様の真実の教えである「妙法華経」をもとに、人々の幸せと世界平和を目指す宗教法人です。当会の教えでは、日に見える世界（この世）と日に見えない世界（あの世）の両方に通じる大宇宙の法則が説かれています。その中で、私たちのご祖先や日々食べているものの命、大自然の全てに対して感謝し、自分でお供養する方法が明かされています。この教えを日々実践することで、自分が幸せになるだけでなく、周りの方々も幸せになることができます。</p>
+        <a class="btn" href="about.html">› 詳しくはこちら</a>
       </div>
     </div>
   </div>
+
+  <!-- 教えについてふれる -->
+  <div class="sec">
+    <div class="row2 rev">
+      <div class="img-ph img-side">画像が入ります。</div>
+      <div class="txt">
+        <p class="sh">教えについてふれる</p>
+        <p class="body-txt">当会の教えでは「お供養」「因縁の解結」「救世者になるための教え」の三つが説かれています。ご祖先・飲食物・大自然へのお供養を日々実践することで、自分の魂が清まります。また、過去世から自分の魂に付いている悪いものを取り除いて、因縁を解結する方法も説かれており、困ることから逃れて幸せな人生を歩むことができます。</p>
+        <a class="btn" href="oshie.html">› 詳しくはこちら</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 入会後の活動について -->
+  <div class="sec">
+    <div class="row2">
+      <div class="img-ph img-side">画像が入ります。</div>
+      <div class="txt">
+        <p class="sh">入会後の活動について</p>
+        <p class="body-txt">入会後は、お経をあげる・念願をする・ご祖先のお供養・佛様から善い名前を頂戴するなど、様々な活動を自分の生活のペースに合わせて行うことができます。本部または支部で行われる行事に参加し、教義や日常生活に活かせる法則を学んだり、多くの仲間と共に活動することもできます。</p>
+        <a class="btn" href="nyukai.html">› 詳しくはこちら</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <footer class="ftr">
