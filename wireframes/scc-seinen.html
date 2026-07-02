@@ -8,111 +8,51 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Hiragino Kaku Gothic Pro','Yu Gothic',sans-serif;background:#fff;color:#222;font-size:14px;line-height:1.8}
 a{color:inherit;text-decoration:none}
-
-/* Header */
 .hdr{background:#1a1a1a;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 28px}
 .hdr-logo{color:#fff;font-size:14px;letter-spacing:1px;flex-shrink:0}
 .hdr-nav{display:flex;gap:20px}
 .hdr-nav a{color:#ccc;font-size:11px;white-space:nowrap}
-
-/* Hero */
 .hero{background:linear-gradient(135deg,#2c3e35 0%,#1a2820 40%,#0f1f18 100%);min-height:160px;display:flex;align-items:center;justify-content:center;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#4a8c6a,#2d6b4a,#4a8c6a)}
 .hero h1{color:#fff;font-size:24px;font-weight:normal;letter-spacing:2px;text-align:center;padding:40px 20px}
-
-/* Breadcrumb */
 .bc{background:#f5f3ef;padding:8px 24px;font-size:11px;color:#888;border-bottom:1px solid #ebe9e5}
-
-/* Layout */
 .wrap{max-width:860px;margin:0 auto;padding:36px 24px}
 .two-col{display:grid;grid-template-columns:1fr 200px;gap:32px;align-items:start}
-
-/* Related nav */
 .rnav{border:1px solid #ddd}
 .rnav .rt{background:#2c3e35;color:#fff;font-size:11px;padding:8px 14px;letter-spacing:1px}
 .rnav ul{list-style:none}
 .rnav ul li{border-bottom:1px solid #eee}
 .rnav ul li a{display:block;padding:9px 14px;font-size:12px;color:#444}
-.rnav ul li a:hover{background:#f8f8f8}
 .rnav ul li.on a{background:#f0ece8;font-weight:bold;color:#222}
-
-/* Sections */
+.contents{background:#f5f3ef;padding:14px 20px;margin-bottom:28px;border-left:3px solid #4a8c6a}
+.contents p{font-size:11px;color:#888;margin-bottom:6px;letter-spacing:1px}
+.contents ol{padding-left:18px;color:#444;font-size:13px;line-height:2}
 .sec{margin-bottom:36px}
-.sh{font-size:16px;font-weight:bold;color:#222;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #ccc}
+.sh{font-size:16px;font-weight:bold;color:#222;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #2c3e35}
+.sec-divider{text-align:center;font-size:16px;font-weight:bold;letter-spacing:3px;color:#222;margin:40px 0 24px;position:relative}
+.sec-divider::before,.sec-divider::after{content:'—';margin:0 12px;color:#888}
+.act-num{text-align:center;font-size:28px;font-weight:bold;color:#222;letter-spacing:2px;margin-bottom:4px}
+.act-title{background:#4a8c6a;color:#fff;text-align:center;font-size:18px;letter-spacing:4px;padding:10px;margin-bottom:16px}
+.act-intro{font-size:13px;color:#444;line-height:2;margin-bottom:20px;border:1px solid #e0e8e3;padding:14px 18px;background:#f9fdf9}
 .sh2{font-size:14px;font-weight:bold;color:#333;margin:20px 0 10px;padding-left:10px;border-left:3px solid #4a8c6a}
-
-/* Image placeholders */
 .img-ph{background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;border-radius:2px;font-style:italic}
 .img-hero{width:100%;height:260px;margin-bottom:22px}
-.img-lg{width:100%;height:220px;margin-bottom:18px}
-.img-md{width:100%;height:180px;margin-bottom:14px}
-.img-sm{width:100%;height:140px;margin-bottom:12px}
-.img-sq{width:150px;height:150px;flex-shrink:0}
-.img-half{width:100%;height:160px}
-.img-vid{width:100%;height:200px;margin:20px 0;position:relative}
-.img-vid::before{content:'▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#666;font-size:24px}
-
-/* Text */
+.img-md{width:100%;height:180px}
+.img-sq{width:180px;height:150px;flex-shrink:0}
 .body-txt{color:#444;font-size:13px;line-height:2;margin-bottom:14px}
-.caption{font-size:11px;color:#888;margin-top:6px;line-height:1.6}
-
-/* Two-col content */
-.row2{display:flex;gap:20px;margin-bottom:24px;align-items:flex-start}
+.note{font-size:12px;color:#666;margin-top:10px;padding-left:14px}
+.note li{list-style:none;padding:2px 0}
+.note li::before{content:'※ '}
+.row2{display:flex;gap:20px;margin-bottom:20px;align-items:flex-start}
 .row2.rev{flex-direction:row-reverse}
-.row2 .txt{flex:1}
-.row2 .img-side{width:180px;flex-shrink:0}
-
-/* Card grid (体験談) */
-.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
-.card{border:1px solid #ddd;border-radius:2px;overflow:hidden}
-.card .ci{background:#2a2a2a;height:160px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;font-style:italic}
-.card .cb{padding:12px 14px}
-.card .ctitle{font-size:13px;font-weight:bold;margin-bottom:4px}
-.card .cmeta{font-size:11px;color:#888;margin-bottom:8px}
-.card .ctag{display:inline-block;background:#2c3e35;color:#fff;font-size:10px;padding:2px 8px;border-radius:1px}
-
-/* Timeline / history */
-.timeline{list-style:none}
-.timeline li{display:flex;gap:16px;padding:8px 0;border-bottom:1px solid #eee;font-size:12px}
-.timeline li .dt{color:#888;white-space:nowrap;min-width:140px}
-.timeline li .ev{flex:1;color:#444}
-
-/* Annual events table */
-.evt-tbl{width:100%;border-collapse:collapse}
-.evt-tbl tr{border-bottom:1px solid #eee}
-.evt-tbl td{padding:12px 8px;font-size:13px;vertical-align:top}
-.evt-tbl td:first-child{white-space:nowrap;color:#888;min-width:90px}
-
-/* Button */
-.btn{display:inline-block;border:1px solid #2c3e35;color:#2c3e35;padding:8px 24px;font-size:12px;letter-spacing:1px;margin-top:12px}
-
-/* Section cards (年間行事) */
-.sec-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-.sec-card{background:#2c3e35;color:#fff;padding:18px;text-align:center;font-size:13px;letter-spacing:1px}
-.sec-card::before{content:'› '}
-
-/* Contents nav */
-.contents{background:#f5f3ef;padding:16px 20px;margin-bottom:24px;border-left:3px solid #4a8c6a}
-.contents .ct-title{font-size:11px;color:#888;margin-bottom:8px;letter-spacing:1px}
-.contents ol{padding-left:20px;color:#444;font-size:13px;line-height:2}
-
-/* Pagination */
-.pg{display:flex;justify-content:center;gap:4px;margin-top:24px}
-.pgb{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #ccc;font-size:12px}
-.pgb.on{background:#2c3e35;color:#fff;border-color:#2c3e35}
-
-/* Form */
-.ftbl{width:100%;border-collapse:collapse}
-.ftbl th,.ftbl td{padding:12px 14px;border-bottom:1px solid #eee;vertical-align:top;font-size:13px}
-.ftbl th{background:#f8f6f3;width:160px;font-weight:normal}
-.fi{background:#fff;border:1px solid #ccc;height:34px;width:100%}
-.fta{background:#fff;border:1px solid #ccc;height:80px;width:100%}
-.req{color:#c00;font-size:10px;margin-left:4px}
-
-/* Map */
-.map-ph{background:#2a2a2a;width:100%;height:340px;display:flex;align-items:center;justify-content:center;color:#666;font-size:13px;margin-bottom:24px}
-
-/* Footer */
+.row2 .txt{flex:1;min-width:0}
+.img-2col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.act-block{border:1px solid #e0e0e0;padding:20px 24px;margin-bottom:20px}
+.act-block-title{font-size:14px;font-weight:bold;color:#2c3e35;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #e0e8e3}
+.history-list{list-style:none;font-size:13px;color:#444;line-height:2.2}
+.history-list li{padding-left:14px;position:relative}
+.history-list li::before{content:'・';position:absolute;left:0}
+.sep{border:none;border-top:2px dotted #ccc;margin:32px 0}
 .ftr{background:#1a1a1a;margin-top:60px;padding:28px 24px 0}
 .ftr-inner{max-width:860px;margin:0 auto}
 .ftr-search{display:flex;gap:12px;margin-bottom:24px}
@@ -144,37 +84,194 @@ a{color:inherit;text-decoration:none}
   </nav>
 </header>
 <div class="hero"><h1>SCC青年団</h1></div>
-<div class="bc"><a href="#">トップ</a> › 育成プログラム › SCC青年団</div>
+<div class="bc"><a href="#">トップ</a> › 平等大慧会の活動 › 教育活動 › SCC青年団</div>
 
 <div class="wrap">
-  <div class="sec">
-    <p class="sh">SCC青年団</p>
-    <div class="img-ph img-lg">画像が入ります。</div>
-    <p class="body-txt">SCC青年団についてのテキストが入ります。活動内容・目的・特徴などのテキストが入ります。</p>
-  </div>
-  <div class="sec">
-    <p class="sh2">活動実績</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-      <div class="card"><div class="ci" style="height:110px;">写真</div><div class="cb"><div class="ctitle">活動実績 1</div><div class="cmeta">20xx年xx月</div></div></div><div class="card"><div class="ci" style="height:110px;">写真</div><div class="cb"><div class="ctitle">活動実績 2</div><div class="cmeta">20xx年xx月</div></div></div><div class="card"><div class="ci" style="height:110px;">写真</div><div class="cb"><div class="ctitle">活動実績 3</div><div class="cmeta">20xx年xx月</div></div></div>
+  <div class="two-col">
+    <div>
+
+      <!-- ヘッダー画像 -->
+      <div class="sec">
+        <div class="img-ph img-hero">画像（SCC青年団 活動写真）</div>
+
+        <!-- Contents -->
+        <div class="contents">
+          <p>Contents</p>
+          <ol>
+            <li>目的・理念</li>
+            <li>活動紹介</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- 目的・理念 -->
+      <div class="sec">
+        <div class="sec-divider">目的・理念</div>
+        <div class="row2">
+          <div class="txt">
+            <p class="body-txt">SCC青年団は<sup>※1</sup>はやぶさ隊の活動のサポート、当会で開催される行事の企画・運営などがあります。また、SCC救援隊の主力として、被災地での救援活動も行っています。</p>
+            <ul class="note">
+              <li>1）「SCC少年団」…年少〜小学校6年生の会員から構成されている</li>
+              <li>2）「SCC青年団はやぶさ隊」…青年団員の内、中学生〜高校生に該当する会員から構成されている</li>
+            </ul>
+          </div>
+          <div>
+            <div class="img-ph img-sq" style="margin-bottom:10px;">画像（活動写真 1）</div>
+            <div class="img-ph img-sq">画像（活動写真 2）</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 活動紹介 -->
+      <div class="sec">
+        <div class="sec-divider">活動紹介</div>
+        <p class="body-txt" style="text-align:center;margin-bottom:28px;">ここからは、各活動を詳しくご紹介いたします。</p>
+
+        <!-- 01 LTD -->
+        <div class="act-num">01</div>
+        <div class="act-title">L T D</div>
+        <div class="act-intro">
+          SCC青年団のLTDでは、参加者の段階に応じたコース運営を行っています。<br>
+          <span style="font-size:11px;color:#888;">（青年団の中でもはやぶさ隊対象年齢の団員は、はやぶさ隊だけのLTDに参加します）</span>
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">1. ビギナーコース</p>
+          <div class="row2">
+            <div class="txt">
+              <p class="body-txt">初めて参加される方でも安心して活動できるようオリエンテーションを実施し、詳細な活動内容を紹介します。また、小グループに分かれてワークショップ・勉強会を開催し、基本的な教義や行事の意義、善悪の正しい判断基準などを学んでいます。参加者は、その都度、学びたい内容を自分自身で選択することができます。</p>
+            </div>
+            <div class="img-ph img-sq">画像が入ります。</div>
+          </div>
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">2. トライコース</p>
+          <div class="row2">
+            <div class="txt">
+              <p class="body-txt">ビギナーコースよりも、レベルアップした活動を行います。教義に基づいた考え方を日常生活に活かすために、ケーススタディなどの手法を用いて学び、人生を豊かにするための実践的なスキルを身に付けることができます。</p>
+            </div>
+            <div class="img-ph img-sq">画像が入ります。</div>
+          </div>
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">3. コアコース</p>
+          <div class="row2">
+            <div class="txt">
+              <p class="body-txt">画像・テキストが入ります。</p>
+            </div>
+            <div class="img-ph img-sq">画像が入ります。</div>
+          </div>
+        </div>
+
+        <hr class="sep">
+
+        <!-- 02 ワークショップ・研修会 -->
+        <div class="act-num">02</div>
+        <div class="act-title">ワークショップ・研修会</div>
+        <div class="act-intro">
+          全国から同年代の仲間が集い、アウトドア活動や勉強会を行っています。お互いの価値観を知り、個性や個人の意見を認め合い活動を進めることで、毎回様々な発見ができることもワークショップ・研修会の魅力です。
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">1. 野外調理</p>
+          <p class="body-txt">自然の中で行う調理は、薪割り、火起こしなど慣れない作業の連続です。道具や物の取扱い方、製作方法など様々なスキルを学べる他、活動を通してリーダーシップやチームワーク、応用力を高めることができるのもアウトドア活動の特徴です。個性を認め、人を思いやることの大切さを知ると同時に、自分自身の気持ちの変化や気づきを通して、心の面でも目覚ましい成長が得られています。</p>
+          <div class="img-2col">
+            <div class="img-ph" style="height:160px;">画像（野外調理 1）</div>
+            <div class="img-ph" style="height:160px;">画像（野外調理 2）</div>
+          </div>
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">2. 勉強会</p>
+          <div class="row2">
+            <div class="txt">
+              <p class="body-txt">教義で明かされている理念や法則、会の歴史を学んでいます。また、青年団組織の課題解決のためにその時のテーマに沿って企画を立案、企画から提案までのプロセスを学び、集中して考え抜く力や企画力、プレゼン力、コミュニケーション力を磨いていきます。</p>
+            </div>
+            <div class="img-ph img-sq">画像（勉強会）</div>
+          </div>
+        </div>
+
+        <hr class="sep">
+
+        <!-- 03 行事サポート -->
+        <div class="act-num">03</div>
+        <div class="act-title">行事サポート</div>
+        <div class="act-intro">
+          実行委員や運営委員を青年団員が務めています。
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">1. 企画・運営</p>
+          <div class="row2">
+            <div class="txt">
+              <p class="body-txt">お盆御供養盆踊り大会や会員間の交流・慰労を目的とした運動会も青年団が中心となって企画・運営にあたっています。競技の企画や広報、会場準備、ポスター制作、司会進行など幅広い分野に携わり、運動会では、競技の作戦や盛り上げ方も検討し、力と智慧を結集して会場を盛り上げています。</p>
+            </div>
+            <div class="img-ph img-sq">画像（行事・運動会）</div>
+          </div>
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">2. 行事の受け入れ</p>
+          <div class="row2">
+            <div class="txt">
+              <p class="body-txt">本部や支部に参拝する会員の皆様の受け入れを行っています。行事の進行や参拝者の受付・誘導、会場整理などは青年団も担当し、高齢者や様々なハンディキャップをお持ちの方のサポートも行います。共に受け入れを行う様々な年代の方々とコミュニケーションを図りながら、その場で多くの学びと発見があります。</p>
+            </div>
+            <div class="img-ph img-sq">画像（受け入れ）</div>
+          </div>
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">3. キャンプサポート</p>
+          <div class="row2">
+            <div class="txt">
+              <p class="body-txt">年に数回開催されるSCC少年団、SCC青年団はやぶさ隊のキャンプのサポートも青年団の重要な役割の一つです。青年団活動で自分たちが学び、経験してきたことを子どもたちに伝え、育成のサポートを行っています。</p>
+            </div>
+            <div class="img-ph img-sq">画像（キャンプサポート）</div>
+          </div>
+        </div>
+
+        <hr class="sep">
+
+        <!-- 04 救援活動 -->
+        <div class="act-num">04</div>
+        <div class="act-title">救援活動</div>
+        <div class="act-intro">
+          災害が発生した際、現地に赴いてボランティア活動を行っています。七色十字の理念をもとに、自分の得手やこれまでに培った経験・スキルを活かし、被災者の支援や被災地の復旧に向けて活動しています。
+        </div>
+
+        <div class="act-block">
+          <p class="act-block-title">活動履歴</p>
+          <ul class="history-list">
+            <li>阪神淡路大震災、東日本大震災、熊本地震の際に義捐金を送る。</li>
+            <li>平成16年の新潟県中越地震、平成21年10月のフィリピン・マニラ近郊での台風災害、平成26年8月の広島豪雨土砂災害、平成28年4月の熊本地震などで救援隊の派遣を行う。</li>
+          </ul>
+          <div class="img-2col" style="margin-top:16px;">
+            <div class="img-ph" style="height:160px;">画像（救援活動 1）</div>
+            <div class="img-ph" style="height:160px;">画像（救援活動 2）</div>
+          </div>
+        </div>
+
+      </div><!-- /活動紹介 -->
     </div>
-  </div>
-  <div class="sec">
-    <p class="sh2">Photo Gallery</p>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
-      <div class="img-ph" style="height:100px;">写真</div><div class="img-ph" style="height:100px;">写真</div><div class="img-ph" style="height:100px;">写真</div><div class="img-ph" style="height:100px;">写真</div><div class="img-ph" style="height:100px;">写真</div><div class="img-ph" style="height:100px;">写真</div><div class="img-ph" style="height:100px;">写真</div><div class="img-ph" style="height:100px;">写真</div>
-    </div>
-  </div>
-  <div class="sec">
-    <p class="sh2">体験談</p>
-    <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid #eee;">
-      <div class="img-ph" style="width:80px;height:80px;flex-shrink:0;">写真</div>
-      <div><p style="font-size:13px;font-weight:bold;margin-bottom:4px;">体験談タイトル 1</p><p class="body-txt">体験談本文テキストが入ります。</p></div>
-    </div><div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid #eee;">
-      <div class="img-ph" style="width:80px;height:80px;flex-shrink:0;">写真</div>
-      <div><p style="font-size:13px;font-weight:bold;margin-bottom:4px;">体験談タイトル 2</p><p class="body-txt">体験談本文テキストが入ります。</p></div>
+
+    <!-- 右サイドナビ -->
+    <div>
+      <div class="rnav">
+        <div class="rt">関連ページ</div>
+        <ul>
+          <li><a href="kyoiku.html">教育プログラムとは</a></li>
+          <li class="on"><a href="scc-seinen.html">SCC青年団</a></li>
+          <li><a href="scc-hayabusa.html">SCC青年団はやぶさ隊</a></li>
+          <li><a href="scc-shonen.html">SCC少年団</a></li>
+          <li><a href="heiyo-shugakuin.html">平等修学院</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+
 <footer class="ftr">
   <div class="ftr-inner">
     <div class="ftr-search">
@@ -186,24 +283,15 @@ a{color:inherit;text-decoration:none}
       <div>
         <div class="ftr-logo">平等大慧会</div>
         <div class="ftr-addr">宗教法人 平等大慧会<br>〒739-0452 広島県廿日市市大野xxx<br>TEL: 0xx-xxx-xxxx</div>
-        <div class="ftr-sns">
-          <div class="ftr-snsb">IG</div>
-          <div class="ftr-snsb">FB</div>
-        </div>
+        <div class="ftr-sns"><div class="ftr-snsb">IG</div><div class="ftr-snsb">FB</div></div>
       </div>
       <div class="ftr-nav">
-        <a href="#">教えについて知りたい方</a>
-        <a href="#">観光・散策をされたい方へ</a>
-        <a href="#">教育活動</a>
-        <a href="#">平和・文化活動</a>
-        <a href="#">交通アクセス</a>
-        <a href="#">体験談</a>
-        <a href="#">お知らせ</a>
-        <a href="#">お問い合わせ</a>
-        <a href="#">会員向けページ</a>
-        <a href="#">平等大慧会基本情報</a>
-        <a href="#">このサイトについて プライバシーポリシー</a>
-        <a href="#">サイトマップ</a>
+        <a href="#">教えについて知りたい方</a><a href="#">観光・散策をされたい方へ</a>
+        <a href="#">教育活動</a><a href="#">平和・文化活動</a>
+        <a href="#">交通アクセス</a><a href="#">体験談</a>
+        <a href="#">お知らせ</a><a href="#">お問い合わせ</a>
+        <a href="#">会員向けページ</a><a href="#">平等大慧会基本情報</a>
+        <a href="#">プライバシーポリシー</a><a href="#">サイトマップ</a>
       </div>
     </div>
     <div class="ftr-copy">© 宗教法人 平等大慧会 All Rights Reserved.</div>
