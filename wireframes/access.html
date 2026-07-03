@@ -16,9 +16,10 @@ a{color:inherit;text-decoration:none}
 .hdr-nav a{color:#ccc;font-size:11px;white-space:nowrap}
 
 /* Hero */
-.hero{background:linear-gradient(135deg,#2c3e35 0%,#1a2820 40%,#0f1f18 100%);min-height:160px;display:flex;align-items:center;justify-content:center;position:relative}
+.hero{background:#2a2a2a;height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-img-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;font-style:italic}
+.hero h1{color:#fff;font-size:24px;font-weight:normal;letter-spacing:2px;text-align:center;position:relative;z-index:1;text-shadow:0 2px 8px rgba(0,0,0,0.6)}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#4a8c6a,#2d6b4a,#4a8c6a)}
-.hero h1{color:#fff;font-size:24px;font-weight:normal;letter-spacing:2px;text-align:center;padding:40px 20px}
 
 /* Breadcrumb */
 .bc{background:#f5f3ef;padding:8px 24px;font-size:11px;color:#888;border-bottom:1px solid #ebe9e5}
@@ -39,84 +40,53 @@ a{color:inherit;text-decoration:none}
 /* Sections */
 .sec{margin-bottom:36px}
 .sh{font-size:16px;font-weight:bold;color:#222;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #ccc}
-.sh2{font-size:14px;font-weight:bold;color:#333;margin:20px 0 10px;padding-left:10px;border-left:3px solid #4a8c6a}
 
-/* Image placeholders */
-.img-ph{background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;border-radius:2px;font-style:italic}
-.img-hero{width:100%;height:260px;margin-bottom:22px}
-.img-lg{width:100%;height:220px;margin-bottom:18px}
-.img-md{width:100%;height:180px;margin-bottom:14px}
-.img-sm{width:100%;height:140px;margin-bottom:12px}
-.img-sq{width:150px;height:150px;flex-shrink:0}
-.img-half{width:100%;height:160px}
-.img-vid{width:100%;height:200px;margin:20px 0;position:relative}
-.img-vid::before{content:'▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#666;font-size:24px}
-
-/* Text */
-.body-txt{color:#444;font-size:13px;line-height:2;margin-bottom:14px}
-.caption{font-size:11px;color:#888;margin-top:6px;line-height:1.6}
-
-/* Two-col content */
-.row2{display:flex;gap:20px;margin-bottom:24px;align-items:flex-start}
-.row2.rev{flex-direction:row-reverse}
-.row2 .txt{flex:1}
-.row2 .img-side{width:180px;flex-shrink:0}
-
-/* Card grid (体験談) */
-.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
-.card{border:1px solid #ddd;border-radius:2px;overflow:hidden}
-.card .ci{background:#2a2a2a;height:160px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;font-style:italic}
-.card .cb{padding:12px 14px}
-.card .ctitle{font-size:13px;font-weight:bold;margin-bottom:4px}
-.card .cmeta{font-size:11px;color:#888;margin-bottom:8px}
-.card .ctag{display:inline-block;background:#2c3e35;color:#fff;font-size:10px;padding:2px 8px;border-radius:1px}
-
-/* Timeline / history */
-.timeline{list-style:none}
-.timeline li{display:flex;gap:16px;padding:8px 0;border-bottom:1px solid #eee;font-size:12px}
-.timeline li .dt{color:#888;white-space:nowrap;min-width:140px}
-.timeline li .ev{flex:1;color:#444}
-
-/* Annual events table */
-.evt-tbl{width:100%;border-collapse:collapse}
-.evt-tbl tr{border-bottom:1px solid #eee}
-.evt-tbl td{padding:12px 8px;font-size:13px;vertical-align:top}
-.evt-tbl td:first-child{white-space:nowrap;color:#888;min-width:90px}
-
-/* Button */
-.btn{display:inline-block;border:1px solid #2c3e35;color:#2c3e35;padding:8px 24px;font-size:12px;letter-spacing:1px;margin-top:12px}
-
-/* Section cards (年間行事) */
-.sec-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-.sec-card{background:#2c3e35;color:#fff;padding:18px;text-align:center;font-size:13px;letter-spacing:1px}
-.sec-card::before{content:'› '}
-
-/* Contents nav */
-.contents{background:#f5f3ef;padding:16px 20px;margin-bottom:24px;border-left:3px solid #4a8c6a}
-.contents .ct-title{font-size:11px;color:#888;margin-bottom:8px;letter-spacing:1px}
-.contents ol{padding-left:20px;color:#444;font-size:13px;line-height:2}
-
-/* Pagination */
-.pg{display:flex;justify-content:center;gap:4px;margin-top:24px}
-.pgb{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1px solid #ccc;font-size:12px}
-.pgb.on{background:#2c3e35;color:#fff;border-color:#2c3e35}
-
-/* Form */
-.ftbl{width:100%;border-collapse:collapse}
-.ftbl th,.ftbl td{padding:12px 14px;border-bottom:1px solid #eee;vertical-align:top;font-size:13px}
-.ftbl th{background:#f8f6f3;width:160px;font-weight:normal}
-.fi{background:#fff;border:1px solid #ccc;height:34px;width:100%}
-.fta{background:#fff;border:1px solid #ccc;height:80px;width:100%}
-.req{color:#c00;font-size:10px;margin-left:4px}
-
-/* Access cards */
-.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
-.access-card{border:1px solid #ddd;padding:16px;background:#fafaf8}
-.ac-icon{font-size:20px;margin-bottom:6px}
-.ac-title{font-size:13px;font-weight:bold;color:#2c3e35;margin-bottom:6px;border-bottom:1px solid #e0ddd8;padding-bottom:6px}
-.ac-body{font-size:12px;color:#555;line-height:1.8}
 /* Map */
 .map-ph{background:#2a2a2a;width:100%;height:340px;display:flex;align-items:center;justify-content:center;color:#666;font-size:13px;margin-bottom:24px}
+
+/* Address table */
+.ftbl{width:100%;border-collapse:collapse}
+.ftbl th,.ftbl td{padding:12px 14px;border-bottom:1px solid #eee;vertical-align:top;font-size:13px}
+.ftbl th{background:#f8f6f3;width:120px;font-weight:normal;color:#666}
+
+/* Notice */
+.notice{font-size:12px;color:#888;line-height:2;margin-top:14px}
+.notice p{padding-left:1em;text-indent:-1em}
+
+/* Accordion */
+.ac-list{margin-top:16px}
+.ac-item{border:1px solid #ddd;margin-bottom:8px;border-radius:2px;overflow:hidden}
+.ac-head{background:#f5f0e8;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;gap:12px}
+.ac-head:hover{background:#ede8dc}
+.ac-head-left{display:flex;align-items:center;gap:12px}
+.ac-icon{font-size:18px;width:28px;text-align:center;flex-shrink:0}
+.ac-label{font-size:13px;font-weight:bold;color:#333;letter-spacing:0.5px}
+.ac-time{font-size:11px;color:#888;white-space:nowrap}
+.ac-arrow{font-size:12px;color:#888;transition:transform 0.2s;flex-shrink:0}
+.ac-item.open .ac-arrow{transform:rotate(180deg)}
+.ac-body{display:none;padding:20px 18px;background:#fff;border-top:1px solid #e8e3da}
+.ac-item.open .ac-body{display:block}
+
+/* Flow diagram */
+.flow{display:flex;align-items:stretch;gap:0;margin-bottom:18px;overflow-x:auto}
+.flow-node{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:90px;padding:10px 8px;background:#f8f5f0;border:1px solid #ddd;font-size:11px;text-align:center;line-height:1.5;border-radius:2px}
+.flow-node.dest{background:#fff7e6;border-color:#c8b48c;min-width:80px}
+.flow-node.goal{background:#c8a850;border-color:#a88c3c;color:#fff;min-width:80px;font-weight:bold;font-size:12px}
+.flow-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 4px;flex-shrink:0}
+.flow-arrow-line{width:36px;height:2px;background:#aaa;position:relative}
+.flow-arrow-line::after{content:'▶';position:absolute;right:-6px;top:-7px;font-size:12px;color:#aaa}
+.flow-step{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0 8px;flex-shrink:0;text-align:center}
+.flow-step-icon{font-size:18px}
+.flow-step-info{font-size:10px;color:#666;line-height:1.5;white-space:nowrap}
+.flow-step-time{font-size:10px;font-weight:bold;color:#2c3e35}
+.flow-step-fare{font-size:10px;color:#888}
+
+/* Car map image */
+.img-ph{background:#2a2a2a;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;border-radius:2px;font-style:italic}
+.car-map{width:100%;height:220px;margin-bottom:14px}
+.car-list{font-size:13px;color:#444;line-height:2.2}
+.car-list li{list-style:none;padding-left:1em;text-indent:-1em}
+.car-list li::before{content:'◎ ';color:#2c3e35}
 
 /* Footer */
 .ftr{background:#1a1a1a;margin-top:60px;padding:28px 24px 0}
@@ -149,11 +119,15 @@ a{color:inherit;text-decoration:none}
     <a href="#">お問い合わせ</a>
   </nav>
 </header>
-<div class="hero"><h1>交通アクセス</h1></div>
+
+<div class="hero">
+  <div class="hero-img-ph">ヒーロー画像（シャトルバス・桜）</div>
+  <h1>交通アクセス</h1>
+</div>
 <div class="bc"><a href="#">HOME</a> › 交通アクセス</div>
 
 <div class="wrap">
-  <!-- 地図 -->
+  <!-- Googleマップ -->
   <div class="map-ph">Googleマップ（王舍城周辺）</div>
 
   <!-- 所在地 -->
@@ -163,73 +137,202 @@ a{color:inherit;text-decoration:none}
       <tr><th>施設名</th><td>王舍城（おうしゃじょう）</td></tr>
       <tr><th>住所</th><td>〒739-0481 広島県廿日市市大野亀ケ岡10700</td></tr>
     </table>
-    <p class="body-txt" style="margin-top:14px;font-size:12px;color:#888;">
-      ※ 金額・所要時間の目安は2025年9月時点のものです。ご利用時には変更されている可能性があります。<br>
-      ※ 宮島口駅からのタクシー利用は、タクシーの不足により乗車できないことがございます。JR山陽本線 阿品駅からご乗車ください。<br>
-      ※ 王舍城境内は、無料送迎シャトルを運行しております。どなたでもご利用いただけます。
-    </p>
+    <div class="notice" style="margin-top:14px">
+      <p>※ 金額・所要時間の目安は2025年9月時点のものです。ご利用時には変更されている可能性があります。</p>
+      <p>※ 宮島口駅からのタクシー利用は、タクシーの不足により乗車できないことがございます。JR山陽本線 阿品駅からご乗車ください。</p>
+      <p>※ 王舍城境内は、無料送迎シャトルを運行しております。どなたでもご利用いただけます。</p>
+    </div>
   </div>
 
-  <!-- アクセス方法 -->
+  <!-- アクセス方法（アコーディオン） -->
   <div class="sec">
     <p class="sh">アクセス方法</p>
 
-    <div class="access-grid">
-      <div class="access-card">
-        <div class="ac-icon">🚃</div>
-        <p class="ac-title">JR広島駅からお越しの場合</p>
-        <p class="ac-body">
-          所要時間：広島駅から約50分<br><br>
-          【JR】広島駅 → 山陽本線 阿品駅（約30分・420円）<br>
-          【タクシー】阿品駅 → 王舍城（約13分・約1,700円）
-        </p>
+    <div class="ac-list">
+
+      <!-- JR広島駅 -->
+      <div class="ac-item open">
+        <div class="ac-head" onclick="toggle(this)">
+          <div class="ac-head-left">
+            <span class="ac-icon">🚃</span>
+            <span class="ac-label">JR広島駅からお越しの場合</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="ac-time">所要時間：約50分</span>
+            <span class="ac-arrow">▼</span>
+          </div>
+        </div>
+        <div class="ac-body">
+          <div class="flow">
+            <div class="flow-node dest">広島駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚃</span>
+              <span class="flow-step-info">JR山陽本線</span>
+              <span class="flow-step-time">約30分</span>
+              <span class="flow-step-fare">420円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node">山陽本線<br>阿品駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚕</span>
+              <span class="flow-step-info">TAXI</span>
+              <span class="flow-step-time">約13分</span>
+              <span class="flow-step-fare">約1,700円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node goal">王舍城</div>
+          </div>
+        </div>
       </div>
 
-      <div class="access-card">
-        <div class="ac-icon">🚃</div>
-        <p class="ac-title">広島電鉄でお越しの場合</p>
-        <p class="ac-body">
-          所要時間：原爆ドーム駅前から約1時間20分<br><br>
-          【広島電鉄】広島駅 → 広電 阿品駅（約1時間10分・270円）<br>
-          【広島電鉄】原爆ドーム前駅 → 広電 阿品駅（約55分・270円）<br>
-          【タクシー】広電阿品駅 → 王舍城（約13分・約1,700円）
-        </p>
+      <!-- 広島電鉄 -->
+      <div class="ac-item">
+        <div class="ac-head" onclick="toggle(this)">
+          <div class="ac-head-left">
+            <span class="ac-icon">🚃</span>
+            <span class="ac-label">広島電鉄でお越しの場合</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="ac-time">所要時間：約1時間20分</span>
+            <span class="ac-arrow">▼</span>
+          </div>
+        </div>
+        <div class="ac-body">
+          <div class="flow">
+            <div class="flow-node dest">原爆ドーム前駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚃</span>
+              <span class="flow-step-info">広島電鉄</span>
+              <span class="flow-step-time">約55分</span>
+              <span class="flow-step-fare">270円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node">広電<br>阿品駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚕</span>
+              <span class="flow-step-info">TAXI</span>
+              <span class="flow-step-time">約13分</span>
+              <span class="flow-step-fare">約1,700円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node goal">王舍城</div>
+          </div>
+        </div>
       </div>
 
-      <div class="access-card">
-        <div class="ac-icon">✈</div>
-        <p class="ac-title">広島空港からお越しの場合</p>
-        <p class="ac-body">
-          所要時間：広島空港から約1時間30分<br><br>
-          【リムジンバス】広島空港 → 広島駅（約50分・1,370円）<br>
-          【JR】広島駅 → 山陽本線 阿品駅（約30分・420円）<br>
-          【タクシー】阿品駅 → 王舍城（約13分・約1,700円）
-        </p>
+      <!-- 広島空港 -->
+      <div class="ac-item">
+        <div class="ac-head" onclick="toggle(this)">
+          <div class="ac-head-left">
+            <span class="ac-icon">✈️</span>
+            <span class="ac-label">広島空港からお越しの場合</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="ac-time">所要時間：約1時間30分</span>
+            <span class="ac-arrow">▼</span>
+          </div>
+        </div>
+        <div class="ac-body">
+          <div class="flow">
+            <div class="flow-node dest">広島空港</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚌</span>
+              <span class="flow-step-info">リムジンバス</span>
+              <span class="flow-step-time">約50分</span>
+              <span class="flow-step-fare">1,370円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node">広島駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚃</span>
+              <span class="flow-step-info">JR山陽本線</span>
+              <span class="flow-step-time">約30分</span>
+              <span class="flow-step-fare">420円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node">阿品駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚕</span>
+              <span class="flow-step-info">TAXI</span>
+              <span class="flow-step-time">約13分</span>
+              <span class="flow-step-fare">約1,700円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node goal">王舍城</div>
+          </div>
+        </div>
       </div>
 
-      <div class="access-card">
-        <div class="ac-icon">✈</div>
-        <p class="ac-title">岩国錦帯橋空港からお越しの場合</p>
-        <p class="ac-body">
-          所要時間：岩国錦帯橋空港から約55分<br><br>
-          【いわくにバス】岩国錦帯橋空港 → 岩国駅（約7分・200円）<br>
-          【JR】岩国駅 → 山陽本線 阿品駅（約25分・420円）<br>
-          【タクシー】阿品駅 → 王舍城（約13分・約1,700円）
-        </p>
+      <!-- 岩国錦帯橋空港 -->
+      <div class="ac-item">
+        <div class="ac-head" onclick="toggle(this)">
+          <div class="ac-head-left">
+            <span class="ac-icon">✈️</span>
+            <span class="ac-label">岩国錦帯橋空港からお越しの場合</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="ac-time">所要時間：約55分</span>
+            <span class="ac-arrow">▼</span>
+          </div>
+        </div>
+        <div class="ac-body">
+          <div class="flow">
+            <div class="flow-node dest">岩国錦帯橋空港</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚌</span>
+              <span class="flow-step-info">いわくにバス</span>
+              <span class="flow-step-time">約7分</span>
+              <span class="flow-step-fare">200円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node">岩国駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚃</span>
+              <span class="flow-step-info">JR山陽本線</span>
+              <span class="flow-step-time">約25分</span>
+              <span class="flow-step-fare">420円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node">阿品駅</div>
+            <div class="flow-step">
+              <span class="flow-step-icon">🚕</span>
+              <span class="flow-step-info">TAXI</span>
+              <span class="flow-step-time">約13分</span>
+              <span class="flow-step-fare">約1,700円</span>
+            </div>
+            <div class="flow-arrow"><div class="flow-arrow-line"></div></div>
+            <div class="flow-node goal">王舍城</div>
+          </div>
+        </div>
       </div>
 
-      <div class="access-card" style="grid-column:1/-1">
-        <div class="ac-icon">🚗</div>
-        <p class="ac-title">お車でお越しの場合</p>
-        <p class="ac-body">
-          ・山陽自動車道 → 大野I.C.から約10分<br>
-          ・西広島バイパス → 宮内交差点 → 吉和方面へ5分 → 畑口橋交差点左折 約10分<br>
-          ・無料駐車場あり
-        </p>
+      <!-- お車 -->
+      <div class="ac-item">
+        <div class="ac-head" onclick="toggle(this)">
+          <div class="ac-head-left">
+            <span class="ac-icon">🚗</span>
+            <span class="ac-label">お車でお越しの場合</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="ac-time">無料駐車場あり</span>
+            <span class="ac-arrow">▼</span>
+          </div>
+        </div>
+        <div class="ac-body">
+          <div class="img-ph car-map">道路マップ画像（山陽自動車道・西広島バイパス・国道2号）</div>
+          <ul class="car-list">
+            <li>山陽自動車道 → 大野I.C.から約10分</li>
+            <li>西広島バイパス → 宮内交差点 → 吉和方面へ5分 → 畑口橋交差点左折 約10分</li>
+            <li>無料駐車場有り</li>
+            <li>王舍城境内は、無料送迎シャトルが運行しております。</li>
+          </ul>
+        </div>
       </div>
-    </div>
+
+    </div><!-- /ac-list -->
   </div>
 </div>
+
 <footer class="ftr">
   <div class="ftr-inner">
     <div class="ftr-search">
@@ -240,10 +343,11 @@ a{color:inherit;text-decoration:none}
     <div class="ftr-main">
       <div>
         <div class="ftr-logo">平等大慧会</div>
-        <div class="ftr-addr">宗教法人 平等大慧会<br>〒739-0452 広島県廿日市市大野xxx<br>TEL: 0xx-xxx-xxxx</div>
+        <div class="ftr-addr">宗教法人 平等大慧会<br>〒739-0481 広島県廿日市市大野亀ケ岡10700</div>
         <div class="ftr-sns">
           <div class="ftr-snsb">IG</div>
           <div class="ftr-snsb">FB</div>
+          <div class="ftr-snsb">YT</div>
         </div>
       </div>
       <div class="ftr-nav">
@@ -261,7 +365,14 @@ a{color:inherit;text-decoration:none}
         <a href="#">サイトマップ</a>
       </div>
     </div>
-    <div class="ftr-copy">© 宗教法人 平等大慧会 All Rights Reserved.</div>
+    <div class="ftr-copy">Copyright(C)BYODO-DAIEKAI All Rights Reserved.</div>
   </div>
 </footer>
+
+<script>
+function toggle(head) {
+  var item = head.closest('.ac-item');
+  item.classList.toggle('open');
+}
+</script>
 </body></html>
